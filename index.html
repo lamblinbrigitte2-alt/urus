@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>URUS CAR | Car Rental in Tangier</title>
+    <meta
+      name="description"
+      content="URUS CAR provides chauffeur-free car rental services from Tanger-Medina, Morocco. Reserve practical city cars, sedans, SUVs, and premium vehicles."
+    >
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="URUS CAR home">
+        <span class="brand-mark">UC</span>
+        <span>
+          <strong>URUS CAR</strong>
+          <small>Car rental in Tangier</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#fleet">Fleet</a>
+        <a href="#quote">Quote</a>
+        <a href="#company">Company</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Self-drive car rental</p>
+          <h1 id="hero-title">URUS CAR</h1>
+          <p>
+            Rent reliable vehicles without a chauffeur from our Tanger-Medina office.
+            Clear pricing, fast pickup, and a fleet ready for city, business, and
+            family travel.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#quote">Get a quote</a>
+            <a class="button secondary" href="#fleet">View fleet</a>
+          </div>
+        </div>
+        <form class="quick-booking" id="quickBooking" aria-label="Quick rental quote">
+          <h2>Quick Quote</h2>
+          <label>
+            Pickup date
+            <input type="date" id="pickupDate" required>
+          </label>
+          <label>
+            Return date
+            <input type="date" id="returnDate" required>
+          </label>
+          <label>
+            Vehicle class
+            <select id="vehicleClass" required>
+              <option value="economy">Economy</option>
+              <option value="sedan">Sedan</option>
+              <option value="suv">SUV</option>
+              <option value="premium">Premium</option>
+            </select>
+          </label>
+          <button class="button primary full" type="submit">Calculate</button>
+          <output class="quote-result" id="quoteResult">Select dates to estimate your rental.</output>
+        </form>
+      </section>
+
+      <section class="trust-strip" aria-label="Service highlights">
+        <div>
+          <strong>Self-drive</strong>
+          <span>Vehicles rented without chauffeur</span>
+        </div>
+        <div>
+          <strong>Local office</strong>
+          <span>88 Kaissariat Merrakech, Tanger-Medina</span>
+        </div>
+        <div>
+          <strong>Business ready</strong>
+          <span>Registered SARL AU company in Morocco</span>
+        </div>
+      </section>
+
+      <section class="section-shell" id="fleet" aria-labelledby="fleet-title">
+        <div class="section-heading">
+          <p class="eyebrow">Fleet finder</p>
+          <h2 id="fleet-title">Choose the right car faster</h2>
+          <p>Filter by category or search by use case to find a vehicle class that fits your trip.</p>
+        </div>
+        <div class="fleet-controls" aria-label="Fleet filters">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="economy">Economy</button>
+          <button class="filter-btn" type="button" data-filter="sedan">Sedan</button>
+          <button class="filter-btn" type="button" data-filter="suv">SUV</button>
+          <button class="filter-btn" type="button" data-filter="premium">Premium</button>
+          <label class="search-label">
+            <span>Search</span>
+            <input id="fleetSearch" type="search" placeholder="airport, family, business">
+          </label>
+        </div>
+        <div class="fleet-grid" id="fleetGrid">
+          <article class="vehicle-card" data-type="economy" data-tags="city budget compact airport">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=900&q=80" alt="Compact rental car on the road">
+            <div>
+              <p class="vehicle-type">Economy</p>
+              <h3>City Compact</h3>
+              <p>Easy parking, low fuel use, and practical comfort for Tangier city trips.</p>
+              <strong>From 250 DHS / day</strong>
+            </div>
+          </article>
+          <article class="vehicle-card" data-type="sedan" data-tags="business airport comfort sedan">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80" alt="Comfortable sedan rental car">
+            <div>
+              <p class="vehicle-type">Sedan</p>
+              <h3>Comfort Sedan</h3>
+              <p>A balanced choice for business appointments, airport transfers, and longer drives.</p>
+              <strong>From 400 DHS / day</strong>
+            </div>
+          </article>
+          <article class="vehicle-card" data-type="suv" data-tags="family luggage mountain suv spacious">
+            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80" alt="SUV rental car for family travel">
+            <div>
+              <p class="vehicle-type">SUV</p>
+              <h3>Family SUV</h3>
+              <p>More space for passengers, luggage, and weekend routes outside the city.</p>
+              <strong>From 650 DHS / day</strong>
+            </div>
+          </article>
+          <article class="vehicle-card" data-type="premium" data-tags="premium luxury event business">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Premium sports rental car">
+            <div>
+              <p class="vehicle-type">Premium</p>
+              <h3>Premium Class</h3>
+              <p>Refined vehicles for special occasions, executive needs, and elevated travel.</p>
+              <strong>From 950 DHS / day</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote-band" id="quote" aria-labelledby="quote-title">
+        <div>
+          <p class="eyebrow">Booking request</p>
+          <h2 id="quote-title">Send your rental details</h2>
+          <p>
+            Tell URUS CAR what you need and the team will confirm vehicle availability,
+            documents, deposit, and final price.
+          </p>
+        </div>
+        <form class="contact-form" id="requestForm">
+          <label>
+            Full name
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            Phone or WhatsApp
+            <input name="phone" type="tel" autocomplete="tel" required>
+          </label>
+          <label>
+            Pickup location
+            <input name="pickup" type="text" value="URUS CAR Tangier office">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Vehicle class, dates, arrival time, and any special request"></textarea>
+          </label>
+          <button class="button primary full" type="submit">Prepare request</button>
+          <output class="quote-result" id="requestResult">Your request summary will appear here.</output>
+        </form>
+      </section>
+
+      <section class="section-shell company" id="company" aria-labelledby="company-title">
+        <div class="section-heading">
+          <p class="eyebrow">Company information</p>
+          <h2 id="company-title">URUS CAR legal details</h2>
+        </div>
+        <dl class="company-grid">
+          <div><dt>Activity</dt><dd>Car rental without chauffeur</dd></div>
+          <div><dt>Address</dt><dd>88 Kaissariat Merrakech, Menhaj Avenue Fes Local N50, Tanger-Medina (AR), Morocco</dd></div>
+          <div><dt>DUNS Number</dt><dd>367474917</dd></div>
+          <div><dt>RC</dt><dd>101701, Tribunal de Tanger</dd></div>
+          <div><dt>ICE</dt><dd>002357872000011</dd></div>
+          <div><dt>Legal form</dt><dd>Société à Responsabilité Limitée à Associé Unique</dd></div>
+          <div><dt>Capital</dt><dd>500 000 DHS</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> URUS CAR. All rights reserved.</p>
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
