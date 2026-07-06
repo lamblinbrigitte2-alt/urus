@@ -1,95 +1,370 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Privacy Policy | URUS CAR</title>
-    <meta name="description" content="Privacy policy for URUS CAR car rental services in Tanger-Medina, Morocco.">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="URUS CAR home">
-        <span class="brand-mark">UC</span>
-        <span>
-          <strong>URUS CAR</strong>
-          <small>Car rental in Tangier</small>
-        </span>
-      </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html#fleet">Fleet</a>
-        <a href="index.html#quote">Quote</a>
-        <a href="index.html#company">Company</a>
-        <a href="privacy.html" aria-current="page">Privacy</a>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URUS CAR Privacy Policy</title>
+
+  <style>
+    :root {
+      --bg: #f6f1e7;
+      --card: #ffffff;
+      --primary: #123c32;
+      --primary-soft: #e8f1ed;
+      --text: #17211d;
+      --muted: #64726c;
+      --border: #d9e4df;
+      --shadow: 0 18px 45px rgba(18, 60, 50, 0.10);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(18, 60, 50, 0.12), transparent 35%),
+        linear-gradient(135deg, #f8f4eb 0%, #efe6d5 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(940px, calc(100% - 32px));
+      margin: 48px auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 48px 42px;
+      background:
+        linear-gradient(135deg, rgba(18, 60, 50, 0.96), rgba(26, 89, 72, 0.94)),
+        url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.08'%3E%3Cpath d='M0 60h120M60 0v120'/%3E%3Ccircle cx='60' cy='60' r='38'/%3E%3C/g%3E%3C/svg%3E");
+      color: #ffffff;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .badge::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #d7b46a;
+      box-shadow: 0 0 0 4px rgba(215, 180, 106, 0.18);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .date {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 16px;
+    }
+
+    .content {
+      padding: 38px 42px 46px;
+    }
+
+    .summary {
+      background: var(--primary-soft);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 32px;
+      font-size: 17px;
+    }
+
+    .summary strong {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 12px;
+      color: var(--primary);
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    h2 span {
+      display: inline-grid;
+      place-items: center;
+      min-width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: #0e2f27;
+    }
+
+    .contact-card {
+      margin-top: 16px;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: #fbfaf7;
+      border: 1px solid var(--border);
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: #fff8e8;
+      border: 1px solid #ead8a8;
+      color: #67552c;
+      font-size: 15px;
+    }
+
+    .footer {
+      padding: 24px 42px;
+      background: #f4f7f5;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        margin: 20px auto;
+        border-radius: 22px;
+      }
+
+      .hero,
+      .content,
+      .footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .hero {
+        padding-top: 36px;
+        padding-bottom: 36px;
+      }
+
+      h2 {
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+      }
+
+      .hero {
+        background: #123c32;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="badge">URUS CAR</div>
+      <h1>Privacy Policy</h1>
+      <div class="date">Effective date: 5 July 2026</div>
     </header>
 
-    <main class="policy-page">
-      <section class="policy-hero">
-        <p class="eyebrow">Legal page</p>
-        <h1>Privacy Policy</h1>
-        <p>Last updated: April 28, 2026</p>
+    <div class="content">
+      <div class="summary">
+        <strong>Summary:</strong> The URUS CAR app does not collect, transmit, sell, or share user data.
+        Its optional reservation draft stays only on the user's device.
+      </div>
+
+      <section>
+        <h2><span>1</span>Who we are</h2>
+        <p>
+          This policy applies to the <strong>URUS CAR</strong> Android app
+          with package name <strong>com.uruscar.app</strong>, provided by
+          <strong>URUS CAR, SARL AU</strong>, a car-rental company in Morocco.
+        </p>
       </section>
 
-      <article class="policy-content">
-        <h2>Who We Are</h2>
+      <section>
+        <h2><span>2</span>What the app does</h2>
         <p>
-          URUS CAR is a Moroccan company offering car rental without chauffeur.
-          Our registered address is 88 Kaissariat Merrakech, Menhaj Avenue Fes
-          Local N50, Tanger-Medina (AR), Morocco.
+          The app is an offline rental-planning tool. It displays vehicle categories
+          and indicative planning rates, calculates estimates, shows company information,
+          and lets a user save an optional reservation draft.
         </p>
         <p>
-          Company details: DUNS Number 367474917, RC 101701 at Tribunal de Tanger,
-          ICE 002357872000011, legal form Société à Responsabilité Limitée à
-          Associé Unique, capital 500 000 DHS.
+          A saved draft is not submitted and does not create, reserve, or confirm a booking.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>3</span>Data processed on the device</h2>
+        <p>
+          If a user saves a draft, the app stores the selected pickup date, return date,
+          vehicle category, and pickup area in the app's private storage on that device.
+        </p>
+        <p>
+          This information is processed only to save and display the draft. It is never sent
+          to URUS CAR or to any other organization.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>4</span>Data collection and sharing</h2>
+        <p>
+          The app does not collect, transmit, sell, or share personal information, precise
+          or approximate location, device identifiers, contacts, financial information,
+          messages, photos, media, app activity, diagnostics, or any other user data.
+        </p>
+        <p>
+          The app contains no advertising, analytics, tracking, social-media, or
+          Google Play Services SDK.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>5</span>Permissions and connectivity</h2>
+        <p>
+          The app declares no internet permission and requests no dangerous or sensitive
+          Android permission. It does not run any background service.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>6</span>Retention and deletion</h2>
+        <p>
+          A saved draft remains on the device until the user selects
+          <strong>Clear local draft</strong>, clears the app's storage in Android settings,
+          or uninstalls the app.
+        </p>
+        <p>
+          Android cloud backup and device-to-device transfer are disabled for the app,
+          so the draft is not backed up by the app.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>7</span>Security</h2>
+        <p>
+          Draft data is kept in Android's app-private storage, which is isolated from
+          ordinary access by other apps.
+        </p>
+        <p>
+          Because the app does not transmit user data, there is no user-data transmission
+          to encrypt. No method of storage is guaranteed to be completely secure,
+          especially on a compromised or rooted device.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>8</span>Children</h2>
+        <p>
+          The app is a general rental-planning utility and is not directed to children.
+          It does not knowingly collect personal data from children or from any other user.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>9</span>Changes to this policy</h2>
+        <p>
+          We may update this policy if the app's features or data practices change.
+          The effective date above will be updated.
+        </p>
+        <p>
+          Material data-practice changes will also be reflected in the app and in the
+          Google Play Data safety declaration before the changed version is released.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>10</span>Privacy contact</h2>
+        <p>
+          Privacy inquiries and deletion questions can be sent by post, marked
+          <strong>Privacy Inquiry</strong>, to:
         </p>
 
-        <h2>Information We Collect</h2>
-        <p>
-          When you request a quote or booking, we may collect your name, phone
-          number, pickup details, rental dates, preferred vehicle class, and any
-          message you choose to send.
-        </p>
+        <div class="contact-card">
+          <p>
+            <strong>URUS CAR, SARL AU</strong><br>
+            88 Kaissariat Merrakech, Menhaj Avenue Fes, Local No. 50<br>
+            Tanger-Medina, Morocco
+          </p>
+          <p>
+            RC 101701 &middot; ICE 002357872000011 &middot; D-U-N-S 367474917
+          </p>
+        </div>
 
-        <h2>How We Use Information</h2>
-        <p>
-          We use your information to respond to requests, prepare rental quotes,
-          confirm availability, manage reservations, verify rental requirements,
-          and maintain business records.
+        <p class="note">
+          Because no data leaves the device, URUS CAR has no server-side app data
+          to locate or delete. The deletion controls in section 6 remove the local draft.
         </p>
+      </section>
+    </div>
 
-        <h2>Sharing</h2>
-        <p>
-          We do not sell personal information. We may share information only when
-          needed to provide rental services, comply with legal obligations, protect
-          our business, or work with trusted operational providers.
-        </p>
+    <footer class="footer">
+      © 2026 URUS CAR, SARL AU. All rights reserved.    -  lamblin.brigitte2@gmail.com
 
-        <h2>Retention</h2>
-        <p>
-          We keep booking and contact information only for as long as needed for
-          service, accounting, legal, and administrative purposes.
-        </p>
-
-        <h2>Your Choices</h2>
-        <p>
-          You may contact URUS CAR to ask about your personal information, request
-          correction, or request deletion where legally possible.
-        </p>
-
-        <h2>Contact</h2>
-        <p>
-          For privacy questions, contact URUS CAR at 88 Kaissariat Merrakech,
-          Menhaj Avenue Fes Local N50, Tanger-Medina (AR), Morocco.
-        </p>
-      </article>
-    </main>
-
-    <footer class="site-footer">
-      <p>© <span id="year"></span> URUS CAR. All rights reserved.</p>
-      <a href="index.html">Back to home</a>
     </footer>
-
-    <script src="script.js"></script>
-  </body>
+  </main>
+</body>
 </html>
